@@ -1,0 +1,4 @@
+.svg:hover {
+  filter: invert(99%) sepia(0%) saturate(7496%) hue-rotate(177deg)
+    brightness(111%) contrast(98%);
+}
