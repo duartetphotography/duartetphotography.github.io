@@ -1,0 +1,55 @@
+import React from "react";
+import { Fade } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
+import "./styles.css";
+
+const fadeImages = [
+  {
+    url: "/hero/4L.jpg",
+  },
+  {
+    url: "/hero/tejo.png",
+  },
+  {
+    url: "/hero/paisagem.jpg",
+  },
+  {
+    url: "/hero/coimbra.jpg",
+  },
+];
+
+const divStyle = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundSize: "cover",
+  backgroundPosition: "center center",
+  height: "90vh",
+};
+
+const properties = {
+  arrows: false,
+  infinite: true,
+  duration: 5000,
+  pauseOnHover: false,
+};
+
+export default function Landing() {
+  return (
+    <div>
+      <Fade {...properties}>
+        {fadeImages.map((fadeImage, index) => (
+          <div key={index}>
+            <div
+              style={{ ...divStyle, backgroundImage: `url(${fadeImage.url})` }}
+            >
+              <h1 className="hero-title">
+                Uma fotografia é um instante de vida capturado para a eternidade
+              </h1>
+            </div>
+          </div>
+        ))}
+      </Fade>
+    </div>
+  );
+}

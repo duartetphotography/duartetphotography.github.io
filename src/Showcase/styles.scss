@@ -1,0 +1,74 @@
+.portfolio-bg {
+  background-color: #829499;
+}
+
+.portefolio-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  /* Relative positioning for the container */
+  margin: 0px 120px;
+}
+
+.line1,
+.line2,
+.line3 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+
+  width: 2px;
+  /* Width of the white line */
+  background-color: #3c3429;
+  /* Color of the white line */
+  transform: translateX(-50%);
+}
+
+.line1 {
+  left: 12%;
+}
+
+.line2 {
+  left: 50%;
+}
+
+.line3 {
+  left: 88%;
+}
+
+.column {
+  flex: 0 0 23%;
+  text-align: center;
+  padding: 20px;
+  background-color: #bab7ad;
+  margin-right: 250px;
+  position: relative;
+  height: 60%;
+}
+
+.column-header {
+  position: absolute;
+  bottom: -10px; /* Adjust this value to add more space */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #28343f;
+  padding: 5px;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  width: 50%;
+}
+
+.column img {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.column:last-of-type {
+  margin-right: 0px;
+}

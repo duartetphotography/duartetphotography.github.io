@@ -1,4 +1,4 @@
-import "./styles.css";
+import "./styles.scss";
 import instaLogo from "../assets/instagram.svg";
 import fbLogo from "../assets/facebook.svg";
 import linkedLogo from "../assets/linkedin.svg";
@@ -10,8 +10,8 @@ function VerticalLine() {
 
 function SVGContainer({ src, alt, url }) {
   return (
-    <a href={url} target="_blank">
-      <img className="h-[30px] svg" src={src} alt={alt} />
+    <a href={url} className="SVGContainer" target="_blank">
+      <img src={src} alt={alt} />
     </a>
   );
 }
@@ -21,12 +21,12 @@ export default function Footer() {
     <footer>
       <div className="footer-column">
         <img src={cameraIcon} alt="Camera" />
-        <img className="w-[50%]" src="/logo.png" alt="Logo" />
+        <img className="Logo" src="/logo.png" alt="Logo" />
       </div>
       <VerticalLine />
       <div className="footer-column">
-        <h3 className="mb-2 text-3xl">Segue-me</h3>
-        <div className="flex justify-center gap-4">
+        <h3>Segue-me</h3>
+        <div className="SocialContainer">
           <SVGContainer
             src={instaLogo}
             alt={"Instagram"}
@@ -46,7 +46,7 @@ export default function Footer() {
       </div>
       <VerticalLine />
       <div className="footer-column">
-        <h3 className="mb-2 text-3xl">Marcações</h3>
+        <h3>Marcações</h3>
         <p>Content for column 3 goes here.</p>
       </div>
     </footer>
