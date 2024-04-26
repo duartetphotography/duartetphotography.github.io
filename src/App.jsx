@@ -1,30 +1,20 @@
-import React, { useRef } from "react";
-import Navbar from "./Navbar";
-import AboutMe from "./AboutMe";
-import Footer from "./Footer";
-import Landing from "./Landing";
-import Showcase from "./Showcase";
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Homepage from "./Pages/Homepage";
+import Portfolio from "./Pages/Portfolio";
+import Gallery from "./Pages/Gallery";
+import ScrollToTop from "./ScrollToTop.jsx";
 
 function App() {
-  const aboutMeRef = useRef(null);
-
-  const scrollToAboutMe = () => {
-    if (aboutMeRef && aboutMeRef.current) {
-      window.scrollTo({
-        behavior: "smooth",
-        top: aboutMeRef.current.offsetTop,
-      });
-    }
-  };
-
   return (
-    <>
-      <Navbar scrollToAboutMe={scrollToAboutMe} />
-      <Landing />
-      <AboutMe ref={aboutMeRef} />
-      <Showcase />
-      <Footer />
-    </>
+    <Router>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/portfolio/:folder" element={<Gallery />} />
+      </Routes>
+    </Router>
   );
 }
 

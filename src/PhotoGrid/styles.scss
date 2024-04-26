@@ -1,0 +1,88 @@
+#Gallery {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 5%;
+    background: #373737;
+    gap: 40px;
+    align-items: center;
+
+    .image-gallery {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .image-item img {
+            width: 100%;
+            border-radius: 5px;
+            height: 100%;
+            object-fit: cover;
+            border: 1px solid white;
+        }
+    }
+
+    .flickr {
+        border: 1px solid white;
+        padding: 15px;
+        border-radius: 5px;
+        text-align: center;
+        width: 170px;
+        background-color: #1d4acd;
+        color: white;
+        animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+        0% {
+            opacity: 50%;
+            text-shadow: 0 0 0 gray;
+        }
+        50% {
+            opacity: 100%;
+            text-shadow: 0 0 10px white;
+        }
+        100% {
+            opacity: 50%;
+            text-shadow: 0 0 0 gray;
+        }
+    }
+
+    /* For screens with width greater than 1200px */
+    @media only screen and (min-width: 1201px) {
+    }
+
+    /* For screens with width between 1025px and 1200px */
+    @media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    }
+
+    /* For screens with width between 769px and 1024px */
+    @media only screen and (min-width: 769px) and (max-width: 1024px) {
+        .image-gallery {
+            flex-direction: column;
+        }
+    }
+
+    /* For screens with width between 481px and 768px */
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
+        .image-gallery {
+            flex-direction: column;
+        }
+    }
+
+    /* For screens with width between 321px and 480px */
+    @media only screen and (min-width: 321px) and (max-width: 480px) {
+        .image-gallery {
+            flex-direction: column;
+        }
+    }
+
+    /* For screens with width up to 320px */
+    @media only screen and (max-width: 320px) {
+        .image-gallery {
+            flex-direction: column;
+        }
+    }
+}

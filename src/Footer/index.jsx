@@ -17,11 +17,20 @@ function SVGContainer({ src, alt, url }) {
 }
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear(); // Get the current year
   return (
     <footer>
       <div className="footer-column">
         <img src={cameraIcon} alt="Camera" />
-        <img className="Logo" src="/logo.png" alt="Logo" />
+        <img className="Logo" src="/logo.webp" alt="Logo" />
+        <div className="copyright">© Duarte Teixeira {currentYear}</div>
+        <a
+          href="https://tiagomdg.github.io/portfolio/"
+          target="_blank"
+          className="desenvolvido footer-link pulsating-text"
+        >
+          Desenvolvido por Tiago Gil
+        </a>
       </div>
       <VerticalLine />
       <div className="footer-column">
@@ -35,7 +44,7 @@ export default function Footer() {
           <SVGContainer
             src={linkedLogo}
             alt={"LinkedIn"}
-            url={"https://www.linkedin.com/in/tiago-gil-330760242/"}
+            url={"https://www.linkedin.com/in/duartetphotography/"}
           />
           <SVGContainer
             src={fbLogo}
@@ -46,8 +55,24 @@ export default function Footer() {
       </div>
       <VerticalLine />
       <div className="footer-column">
-        <h3>Marcações</h3>
-        <p>Content for column 3 goes here.</p>
+        <h3 className="marcacoes-title">Marcações</h3>
+        <a
+          className="marcacoes"
+          href="https://forms.gle/bNX23sqfwT2r2BPA9"
+          target="_blank"
+        >
+          Agendar
+        </a>
+      </div>
+      <div className="creditos-column-mobile">
+        <div>© Duarte Teixeira {currentYear}</div>
+        <a
+          href="https://tiagomdg.github.io/portfolio/"
+          target="_blank"
+          className="footer-link pulsating-text"
+        >
+          Desenvolvido por Tiago Gil
+        </a>
       </div>
     </footer>
   );

@@ -3,16 +3,23 @@
     height: 100vh;
 
     .main-container {
-        background-color: #373737;
+        background-image: url("/aboutme.webp");
+        background-position: center center;
+        background-size: cover;
         display: flex;
         flex: 70%;
         align-items: center;
+    }
+
+    .altLogoMobile {
+        display: none;
     }
 
     .semi-circle {
         border-radius: 0rem 100rem 100rem 0rem;
         left: 0;
         position: relative;
+        opacity: 70%;
         width: 350px;
         height: 100%;
         background-color: #555555;
@@ -25,8 +32,11 @@
         align-items: center;
         justify-content: center;
         flex: 60%;
-        // margin-left: -10%;
         color: white;
+
+        .the-text {
+            font-size: 1.5rem;
+        }
 
         div {
             width: 90%;
@@ -38,15 +48,15 @@
         .title {
             margin-bottom: 2rem;
             font-weight: 700;
-            font-size: 4.5rem /* 72px */;
+            font-size: 4.5rem;
             line-height: 1;
 
-            --s: 20px; /* the size on the corner */
-            --t: 2px; /* the thickness of the border */
-            --g: 10px; /* the gap between the border and image */
+            --s: 20px;
+            --t: 2px;
+            --g: 10px;
 
             padding: calc(var(--g) + var(--t));
-            outline: var(--t) solid white; /* the color here */
+            outline: var(--t) solid white;
             outline-offset: calc(-1 * var(--t));
             mask:
                 conic-gradient(at var(--s) var(--s), #0000 75%, #000 0) 0 0 / calc(100% - var(--s))
@@ -83,6 +93,201 @@
 
         .visible {
             opacity: 1;
+        }
+    }
+}
+
+/* For screens with width greater than 1200px */
+@media only screen and (min-width: 1201px) {
+}
+
+/* For screens with width between 1025px and 1200px */
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    #AboutMe {
+        height: 100%;
+        .main-container {
+            padding: 40px 0px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .altLogoMobile {
+            display: block;
+            margin: -130px;
+            filter: invert(91%) sepia(100%) saturate(1%) hue-rotate(150deg) brightness(103%) contrast(101%);
+            width: 50%;
+        }
+        .about-text {
+            div {
+                width: auto;
+            }
+
+            .title {
+                font-size: 3rem;
+                padding: 20px;
+                margin-top: 20px;
+            }
+
+            .the-text {
+                margin: 0px 15%;
+                line-height: 25px;
+            }
+        }
+        .semi-circle,
+        .hero {
+            display: none;
+        }
+    }
+}
+
+/* For screens with width between 769px and 1024px */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    #AboutMe {
+        height: 100%;
+        .main-container {
+            padding: 40px 0px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .altLogoMobile {
+            display: block;
+            margin: -130px;
+            filter: invert(91%) sepia(100%) saturate(1%) hue-rotate(150deg) brightness(103%) contrast(101%);
+            width: 50%;
+        }
+        .about-text {
+            div {
+                width: auto;
+            }
+
+            .title {
+                font-size: 3rem;
+                padding: 20px;
+                margin-top: 20px;
+            }
+
+            .the-text {
+                margin: 0px 15%;
+                line-height: 25px;
+            }
+        }
+        .semi-circle,
+        .hero {
+            display: none;
+        }
+    }
+}
+
+/* For screens with width between 481px and 768px */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    #AboutMe {
+        height: 100%;
+        .main-container {
+            padding: 40px 0px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .altLogoMobile {
+            display: block;
+            margin: -90px;
+            filter: invert(91%) sepia(100%) saturate(1%) hue-rotate(150deg) brightness(103%) contrast(101%);
+            width: 50%;
+        }
+        .about-text {
+            div {
+                width: auto;
+            }
+
+            .title {
+                font-size: 3rem;
+                padding: 20px;
+                margin-top: 20px;
+            }
+
+            .the-text {
+                margin: 0px 5%;
+                line-height: 25px;
+                font-size: 1rem;
+            }
+        }
+        .semi-circle,
+        .hero {
+            display: none;
+        }
+    }
+}
+
+/* For screens with width between 321px and 480px */
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+    #AboutMe {
+        height: 100%;
+        .main-container {
+            padding: 40px 0px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .altLogoMobile {
+            display: block;
+            margin: -100px;
+            filter: invert(91%) sepia(100%) saturate(1%) hue-rotate(150deg) brightness(103%) contrast(101%);
+            width: 80%;
+        }
+        .about-text {
+            div {
+                width: auto;
+            }
+
+            .title {
+                font-size: 3rem;
+                padding: 20px;
+                margin-top: 20px;
+            }
+
+            .the-text {
+                margin: 0px 5%;
+                line-height: 25px;
+                font-size: 1rem;
+            }
+        }
+        .semi-circle,
+        .hero {
+            display: none;
+        }
+    }
+}
+
+/* For screens with width up to 320px */
+@media only screen and (max-width: 320px) {
+    #AboutMe {
+        height: 100%;
+        .main-container {
+            padding: 40px 0px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .altLogoMobile {
+            display: block;
+            margin: -130px;
+            filter: invert(91%) sepia(100%) saturate(1%) hue-rotate(150deg) brightness(103%) contrast(101%);
+        }
+        .about-text {
+            div {
+                width: auto;
+            }
+
+            .title {
+                font-size: 3rem;
+                padding: 20px;
+                margin-top: 20px;
+            }
+
+            .the-text {
+                margin: 0px 5%;
+                line-height: 25px;
+            }
+        }
+        .semi-circle,
+        .hero {
+            display: none;
         }
     }
 }

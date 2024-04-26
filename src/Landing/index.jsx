@@ -1,11 +1,13 @@
+import { useEffect } from "react";
 import "./styles.scss";
 
 export default function Landing() {
-  return (
-    <div id="Landing">
-      <h1 className="hero-title">
-        Uma fotografia é um instante de vida capturado para a eternidade
-      </h1>
-    </div>
-  );
+  useEffect(() => {
+    const img = new Image();
+    const mobile = new Image();
+
+    img.src = "landing/background.webp";
+    mobile.src = "landing/mobile_background.webp";
+  }, []);
+  return <div id="Landing"></div>;
 }

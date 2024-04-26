@@ -5,12 +5,12 @@ const SemiCircle = () => <div className="semi-circle" />;
 
 const AboutMe = forwardRef((props, ref) => {
   const [visibleIndex, setVisibleIndex] = useState(0);
-  const images = ["/eu.png", "/altlogo.png"];
+  const images = ["/eu.webp", "/altlogo.webp"];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setVisibleIndex((prevIndex) => (prevIndex === 0 ? 1 : 0));
-    }, 6000);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
@@ -20,26 +20,31 @@ const AboutMe = forwardRef((props, ref) => {
         <SemiCircle />
         <div className="about-text">
           <h1 className="title">SOBRE MIM</h1>
-          <div>
+          <div className="the-text">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Exercitationem aliquid beatae similique sapiente, commodi ea. Aut,
-              a laborum natus nesciunt velit, tempore tempora illo quaerat, vero
-              placeat in deleniti doloremque?
+              Olá. Sou o Duarte Teixeira, um apaixonado pela arte da fotografia.
+              Sempre fui fascinado pelo mundo da fotografia e, há 5 anos,
+              adquiri a minha primeira câmara. O que começou num hobby
+              rapidamente se tornou a minha paixão.
             </p>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni
-              quo eaque iure exercitationem libero et consequuntur. Quod, nobis
-              hic reiciendis adipisci sequi velit quisquam debitis? Tempore et
-              qui obcaecati voluptate?
+              Entrei num curso de design nas Caldas da Rainha, e ao final do dia
+              ia com os meus amigos para a praia, parques, onde passámos grandes
+              momentos. E eu claro aproveitava e levava a câmara para tirar umas
+              fotos.
             </p>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
-              aliquam perspiciatis odio dicta amet est beatae ipsam nemo et
-              aspernatur. Eaque, minus at ipsam laborum in commodi quia pariatur
-              sequi!
+              Cada sessão fotográfica é uma oportunidade de contar uma história
+              única e criar imagens que serão apreciadas por gerações. A
+              confiança e o conforto são fundamentais para que possamos
+              colaborar e criar juntos momentos especiais.
             </p>
           </div>
+          <img
+            src="/altlogo.webp"
+            className="altLogoMobile"
+            alt="Mobile Logo"
+          />
         </div>
         <div className="hero">
           {images.map((image, index) => (
