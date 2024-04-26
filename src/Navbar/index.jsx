@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import instaLogo from "../assets/instagram.svg";
 import fbLogo from "../assets/facebook.svg";
 import linkedLogo from "../assets/linkedin.svg";
@@ -17,7 +17,9 @@ function Navbar() {
   return (
     <>
       <nav id="Navbar">
-        <img className="Logo" src="/logo.webp" alt="" />
+        <Link to="/">
+          <img className="Logo" src="/logo.webp" alt="" />
+        </Link>
         <div className="LinkContainer">
           <NavLink to="/" activeclassname="active">
             Home

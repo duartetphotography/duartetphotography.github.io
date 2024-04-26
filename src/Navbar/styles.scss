@@ -13,7 +13,7 @@
   }
 
   .Logo {
-    width: 16%;
+    width: 250px;
   }
 
   .LinkContainer {
@@ -38,10 +38,6 @@
   }
 
   @media (max-width: 900px) {
-    .Logo {
-      width: 30%;
-    }
-
     .LinkContainer {
       gap: 1.5rem;
       .SVGContainer {
@@ -53,10 +49,6 @@
   }
 
   @media (max-width: 768px) {
-    .Logo {
-      width: 30%;
-    }
-
     .LinkContainer {
       gap: 1.5rem;
       .SVGContainer {
