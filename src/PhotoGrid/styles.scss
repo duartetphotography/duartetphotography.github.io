@@ -3,8 +3,6 @@
     flex-direction: column;
     padding: 40px 5%;
     background: #373737;
-    gap: 40px;
-    align-items: center;
 
     .image-gallery {
         display: flex;
@@ -87,6 +85,7 @@
         background-color: #1d4acd;
         color: white;
         animation: pulse 1.5s infinite;
+        margin: 40px auto 0; /* top margin, auto horizontal margins, no bottom margin */
     }
 
     @keyframes pulse {

@@ -1,10 +1,18 @@
 #EventGrid {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     background-color: #373737;
     height: 100%;
     padding: 2% 10%;
+}
+
+.breadcrumb {
+    margin-bottom: 20px;
+    color: white;
+    font-size: large;
+    span {
+        color: black;
+    }
 }
 
 .grid-container {
@@ -82,12 +90,20 @@
     }
 }
 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
+/* For screens with width between 769px and 1024px */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
     #EventGrid {
-        padding: 2% 20%;
+        padding: 10% 5%;
         .grid-container {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .slide-down {
+            visibility: hidden;
+        }
+
+        .slide-down-mobile {
+            visibility: visible;
         }
     }
 }
@@ -95,7 +111,7 @@
 /* Medium devices (tablets, 376px to 991px) */
 @media (min-width: 376px) and (max-width: 991px) {
     #EventGrid {
-        padding: 10% 20%;
+        padding: 10% 5%;
         .grid-container {
             grid-template-columns: repeat(1, 1fr);
         }
@@ -113,7 +129,7 @@
 /* Small devices (phones, up to 375px, including iPhone 12 width) */
 @media (max-width: 375px) {
     #EventGrid {
-        padding: 10% 20%;
+        padding: 10% 5%;
         .grid-container {
             grid-template-columns: repeat(1, 1fr);
         }

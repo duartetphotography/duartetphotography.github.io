@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import "./styles.scss";
 import { shuffle } from "../Utilities";
 
 function PhotoGrid({
   photoList,
   division,
+  title,
   flickr = "https://www.flickr.com/people/200615777@N08/",
 }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(null);
@@ -81,6 +83,10 @@ function PhotoGrid({
 
   return (
     <div id="Gallery">
+      <div className="breadcrumb">
+        <Link to="/">Home</Link> <span>/</span>{" "}
+        <Link to="/portfolio">Portfolio</Link> <span>/</span> {title}
+      </div>
       <div className="image-gallery">
         {[...Array(division)].map((_, columnIndex) => (
           <div key={columnIndex} className="column">
