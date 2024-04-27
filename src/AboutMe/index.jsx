@@ -53,6 +53,7 @@ const AboutMe = forwardRef((props, ref) => {
               className={index === visibleIndex ? "visible" : ""}
               src={image}
               alt="DRK"
+              loading="lazy"
             />
           ))}
         </div>
