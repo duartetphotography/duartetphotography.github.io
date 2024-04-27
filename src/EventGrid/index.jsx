@@ -61,7 +61,7 @@ function EventGrid() {
   return (
     <div id="EventGrid">
       <div className="breadcrumb">
-        <Link to="/">Home</Link> / Portfolio
+        <Link to="/">Home</Link> <span>/</span> Portfolio
       </div>
       <div className="grid-container">
         {eventsData.map((event, index) => (
