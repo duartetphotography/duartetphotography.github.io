@@ -24,7 +24,7 @@ function Navbar() {
           <NavLink to="/" activeclassname="active">
             Home
           </NavLink>
-          <NavLink to="/portfolio" activeclassname="active">
+          <NavLink to="/portfolio/" activeclassname="active">
             Portfolio
           </NavLink>
 

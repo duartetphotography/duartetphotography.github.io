@@ -85,7 +85,7 @@ function PhotoGrid({
     <div id="Gallery">
       <div className="breadcrumb">
         <Link to="/">Home</Link> <span>/</span>{" "}
-        <Link to="/portfolio">Portfolio</Link> <span>/</span> {title}
+        <Link to="/portfolio/">Portfolio</Link> <span>/</span> {title}
       </div>
       <div className="image-gallery">
         {[...Array(division)].map((_, columnIndex) => (

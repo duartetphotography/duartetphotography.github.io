@@ -24,37 +24,37 @@ function EventGrid() {
     {
       text: "Baja Oeste",
       picture: "/portfolio/bajaoeste/2.webp",
-      link: "/portfolio/bajaoeste",
+      link: "/portfolio/bajaoeste/",
     },
     {
       text: "Baja Portalegre",
       picture: "/portfolio/bajaportalegre/13.webp",
-      link: "/portfolio/bajaportalegre",
+      link: "/portfolio/bajaportalegre/",
     },
     {
       text: "24 Horas TT",
       picture: "/portfolio/horastt/5.webp",
-      link: "/portfolio/horastt",
+      link: "/portfolio/horastt/",
     },
     {
       text: "Rally Raid BP Ultimate",
       picture: "/portfolio/rallyraidbpultimate/11.webp",
-      link: "/portfolio/rallyraidbpultimate",
+      link: "/portfolio/rallyraidbpultimate/",
     },
     {
       text: "Viagens na minha terra",
       picture: "/portfolio/viagensnaminhaterra/7.webp",
-      link: "/portfolio/viagensnaminhaterra",
+      link: "/portfolio/viagensnaminhaterra/",
     },
     {
       text: "Photoshoots",
       picture: "/portfolio/photoshoots/7.webp",
-      link: "/portfolio/photoshoots",
+      link: "/portfolio/photoshoots/",
     },
     {
       text: "Photo Dump",
       picture: "/portfolio/dump/8.webp",
-      link: "/portfolio/dump",
+      link: "/portfolio/dump/",
     },
   ];
 
